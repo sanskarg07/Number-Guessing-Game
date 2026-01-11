@@ -2,7 +2,7 @@ import random
 def game():
     computer = random.randrange(100)
     round_no = 1
-    print("Welcome to the Game 🔰✨")
+    print("✨🔰Welcome to the Game 🔰✨")
     print("Guess the number between 1 to 100 📈")
     while True:
         print(f"Round : {round_no}")
@@ -14,7 +14,7 @@ def game():
             user = int(user)
             if user == computer:
                 print (f"Congrats🎉! You won in {round_no} Rounds! ")
-                round_no +=1
+                print(f"You made it in {round_no} rounds 😁❤️")
                 break
 
             elif (user>computer):
@@ -30,13 +30,12 @@ def game():
             continue
             
 
-        print(f"You made it in {round_no} rounds 😁❤️")
 
 while True:
     game()
     another = input("Do you wanna play it again 😊? (yes/no) : ")
     if another!= "yes":
-        for i in range (3):
+        for i in range (2):
             print("Please 😣")
             another = input("What you say : ")
             if another == "yes":
