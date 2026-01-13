@@ -1,8 +1,15 @@
 import random
+print("✨🔰Welcome to the Game 🔰✨")
+print('''📝Instructions for game :-
+    🪶 Computer will choose a number and you have to guess it.
+    🪶 If you'll guess wrong number it'll inform you.
+        -> You are high = guess lower number.
+        -> You are low = guess higher number.
+    🪶 Type "end" to quit the game anytime.
+      ''')
 def game():
     computer = random.randrange(100)
     round_no = 1
-    print("✨🔰Welcome to the Game 🔰✨")
     print("Guess the number between 1 to 100 📈")
     while True:
         print(f"Round : {round_no}")
@@ -31,16 +38,21 @@ def game():
             
 
 
-while True:
+for f in range (2):
     game()
     another = input("Do you wanna play it again 😊? (yes/no) : ")
     if another!= "yes":
         for i in range (2):
             print("Please 😣")
             another = input("What you say : ")
-            if another == "yes":
+            if another.lower() in ["yes","ok","okay"]:
+                print("\n")
+                print("Thanks for playing it again!😊")
                 game()
                 break           
+    elif another in ["yes","Yes"] :
+        print("\n")
+        game()
     break
 
 print("Thanks for playing ❤️")
