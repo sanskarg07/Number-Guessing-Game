@@ -74,3 +74,4 @@ def replay():
 while True:
     replay()
     print("Thanks for playing ❤️")
+    break
